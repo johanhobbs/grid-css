@@ -1,8 +1,13 @@
 body{
-    margin: 50px;
+    margin: 60px;
 }
-.sidenav{
-    grid-area: sidenav;
+
+.side-nav-one{
+    grid-area: side-nav-one;
+}
+
+.side-nav-two{
+    grid-area: side-nav-two;
 }
 
 .content{
@@ -18,27 +23,59 @@ body{
 }
 
 .container{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 120px 120px 120px;
-    grid-template-areas: 
-    "....... header header"
-    "sidenav content content"
-    "footer footer footer";
-
     background-color: #fff;
-    color: #543;
+    color: #456;
+}
+
+.container{
+    display: grid;
+    grid-gap:1em;
+    grid-template-areas:
+    "header"
+    "side-nav-one"
+    "content"
+    "side-nav-two"
+    "footer";
+}
+
+@media only screen and (min-width: 500px) {
+    .container{
+        grid-template-columns: 20% auto;
+        grid-template-areas:
+        "header header"
+        "side-nav-one content"
+        "side-nav-two side-nav-two"
+        "footer footer";
+}
+
+@media only screen and (min-width: 600px){
+    .container{
+        grid-gap: 20%;
+        grid-template-columns: 120px auto 120px;
+        grid-template-areas:
+        "header header header"
+        "side-nav-one content side-nav-two"
+        "footer footer footer";
+        max-width: 600px;
+    }
+}
+
+
 }
 
 .area{
-    color: #fff;
-    background-color: #543;
-    padding: 20px;
-    font: 150%;
+    background-color: pink;
+    color: purple;
     border-radius: 5px;
+    padding: 15px;
+    font-size: 100%;
 }
 
-.header,
-.footer {
-    background-color: #999;
+.header, .footer{
+    background-color: salmon;
+}
+
+.side-nav-two{
+    background-color: greenyellow;
+    color: #542;
 }
