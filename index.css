@@ -1,0 +1,38 @@
+body{
+    margin: 40px;
+}
+
+.container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 100px 100px 100px;
+    background-color: blue;
+    color: #444;
+}
+
+.area{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+.box-a{
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.box-b{
+    grid-column: 3;
+    grid-row: 1/3;
+}
+
+.box-c{
+    grid-column: 1;
+    grid-row: 2;
+}
+.box-d{
+    grid-column: 2;
+    grid-row: 2;
+}
