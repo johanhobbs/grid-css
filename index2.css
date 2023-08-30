@@ -1,44 +1,44 @@
 body{
-    margin: 40px;
+    margin: 50px;
+}
+.sidenav{
+    grid-area: sidenav;
+}
+
+.content{
+    grid-area: content;
+}
+
+.header{
+    grid-area: header;
+}
+
+.footer{
+    grid-area: footer;
 }
 
 .container{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(4, [col] 100px);
-    grid-template-rows: repeat(3, [row] auto);
-    background-color: blue;
-    color: #444;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-areas: 
+    "....... header header"
+    "sidenav content content"
+    "footer footer footer";
+
+    background-color: #fff;
+    color: #543;
 }
 
 .area{
-    background-color: red;
-    color: white;
-    border-radius: 5px;
+    color: #fff;
+    background-color: #543;
     padding: 20px;
-    font-size: 150%;
+    font: 150%;
+    border-radius: 5px;
 }
 
-.box-a{
-    grid-column: col / span 2;
-    grid-row: row;
-}
-
-.box-b{
-    grid-column: col 3 / span 2;
-    grid-row: row;
-}
-
-.box-c{
-    grid-column: col;
-    grid-row: row 2;
-}
-.box-d{
-    grid-column: col 2 / span 3;
-    grid-row: row 2;
-}
-
-.box-e{
-    grid-column: col / span 4;
-    grid-row: row 3;
+.header,
+.footer {
+    background-color: #999;
 }
